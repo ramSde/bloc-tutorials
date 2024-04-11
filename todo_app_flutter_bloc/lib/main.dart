@@ -66,16 +66,20 @@ class Myapp extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return AlertDialog(
-                      content: Column(
-                        children: [
-                          TextField(
-                            controller: textContrller,
-                            decoration: InputDecoration(hintText: "Title"),
-                          ),
-                          IconButton(onPressed: () {
-                            todobloc.add(addtodoevent(todo: textContrller.text?? "adad"));
-                          }, icon: Icon(Icons.done))
-                        ],
+                      content: Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                            TextField(
+                              controller: textContrller,
+                              decoration: InputDecoration(hintText: "Title"),
+                            ),
+                            IconButton(onPressed: () {
+                              todobloc.add(addtodoevent(todo: textContrller.text?? "adad"));
+                              Navigator.pop(context);
+                            }, icon: Icon(Icons.done))
+                          ],
+                        ),
                       ),
                     );
                   });
