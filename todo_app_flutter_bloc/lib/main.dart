@@ -20,7 +20,8 @@ class Myapp extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: ()  {
-                todobloc.add((showdialogevent()));
+                // todobloc.add((showdialogevent()));
+                 todobloc.add((getTodoEvent()));
               },
               icon: Icon(Icons.add))
         ],
@@ -44,7 +45,7 @@ class Myapp extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(data[index]),
+                  Expanded(child: Text(data[index],style: TextStyle(overflow: TextOverflow.ellipsis),textDirection: TextDirection.ltr,)),
                   IconButton(onPressed: () {
                     todobloc.add(edittodoevent(index: index));
                     

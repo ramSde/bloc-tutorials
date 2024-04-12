@@ -28,3 +28,6 @@ class deletetodostate extends TodoBlocState {
 
   
 }
+class gettodostate extends TodoBlocState{
+  
+}
